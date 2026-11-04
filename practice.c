@@ -23,3 +23,5 @@ int main(){
 
     return 0;
 }
+
+//program to compute LCM and GCD of two integers
