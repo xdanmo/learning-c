@@ -1,5 +1,6 @@
 // program to check if a number is palindrome or not.
 
+/*
 #include <stdio.h>
 int main(){
     int n, m, o = 0;
@@ -23,5 +24,20 @@ int main(){
 
     return 0;
 }
+*/
 
-//program to compute LCM and GCD of two integers
+// program using a function to find both the largest and smallest numbers in an array of integers.
+
+#include <stdio.h>
+int max(int list[], int size){
+    for(int i = 1; i < size; i++){
+        if(list[i] > list[0]){
+            list[0] = list[i];
+        }
+    }
+    return list[0];
+}
+int main(){
+    int n[5] = {1, 2, 3, 4, 5};
+    printf("%d\n", max(n, 5));
+}
