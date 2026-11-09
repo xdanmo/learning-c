@@ -30,14 +30,25 @@ int main(){
 
 #include <stdio.h>
 int max(int list[], int size){
+    int maximum = list[0];
     for(int i = 1; i < size; i++){
-        if(list[i] > list[0]){
-            list[0] = list[i];
+        if(list[i] > maximum){
+            maximum = list[i];
         }
     }
-    return list[0];
+    return maximum;
+}
+int min(int list[], int size){
+    int minimum = list[0];
+    for(int i = 1; i < size; i++){
+        if(list[i] < minimum){
+            minimum = list[i];
+        }
+    }
+    return minimum;
 }
 int main(){
-    int n[5] = {1, 2, 3, 4, 5};
+    int n[5] = {23, 233, 53, 32, 33};
     printf("%d\n", max(n, 5));
+    printf("%d\n", min(n, 5));
 }
